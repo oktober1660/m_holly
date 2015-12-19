@@ -1,0 +1,116 @@
+@charset "euck-kr";
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+ul {
+  list-style: none;
+}
+body {
+  background-image: url('../../lib/images/mainbg.jpg');
+  background-position: center 0 ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+.wrap {
+  height: 100%;
+  min-width: 850px;
+}
+.wrap header {
+  height: 100px;
+  padding: 0 20px;
+  -webkit-box-shadow: 0px 2px 5px #666666;
+  -moz-box-shadow: 0px 2px 5px #666666;
+  box-shadow: 0px 2px 5px #666666;
+}
+.wrap header h1 {
+  width: 104px;
+  height: 52px;
+  padding: 25px;
+  outline: 1px #F00 solid;
+  float: left;
+  transition: 1s;
+}
+.wrap header h1 a {
+  display: block;
+  text-indent: -9999px;
+  background-image: url('../../lib/images/logo.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  transition: 1s cubic-bezier(0.86, 0, 0.59, 0.99) 0s;
+}
+.wrap header h1 a:hover {
+  transform: rotateY(-180deg);
+}
+.wrap header nav.gnb {
+  float: right;
+}
+.wrap header nav.gnb button {
+  display: none;
+  transition: 1s;
+}
+.wrap header nav.gnb ul {
+  height: 100px;
+}
+.wrap header nav.gnb ul li {
+  float: left;
+  line-height: 100px;
+  padding: 0 18px;
+}
+.wrap header nav.gnb ul li a {
+  color: #cd2d4c;
+  font-size: 16px;
+  display: block;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.wrap header nav.gnb ul li a:hover {
+  border-top: 3px #F00 solid;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url('../../lib/images/mimage.jpg');
+    background-position: center top;
+    background-attachment: fixde;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+  }
+  .wrap {
+    min-width: 480px;
+  }
+  nav.gnb ul {
+    display: none;
+  }
+  nav.gnb button {
+    display: block !important;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 61px;
+    background: #F00;
+    color: #FFF;
+    border: 0 none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .wrap header {
+    height: 50px;
+  }
+  .wrap h1 {
+    padding: 0 25px !important;
+    height: 50px;
+  }
+  .wrap nav.gnb button {
+    right: 0;
+    height: 50px;
+    width: 148px;
+  }
+}
